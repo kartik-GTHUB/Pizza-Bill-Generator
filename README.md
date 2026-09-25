@@ -1,31 +1,38 @@
 # 🍕 Pizza Bill Generator
 
-A simple **Java-based Pizza Bill Generator** that calculates the total pizza price based on selected options such as pizza type, extra cheese, toppings, and takeaway.
+A simple **Pizza Bill Generator** built using **Core Java**. This project demonstrates basic **Object-Oriented Programming (OOP)** concepts while calculating the total bill for a pizza order.
 
-## 🛠️ Technologies
+## 🚀 Features
 
-* Java
-* OOP Concepts
+* 🍕 Select different pizza options
+* 🧀 Add extra cheese
+* 🍄 Add extra toppings
+* 📦 Add takeaway charges
+* 💰 Automatically calculate the total bill
+* 🧾 Display the final pizza bill
 
-## ✨ Features
+## 🧠 OOP Concepts Applied
 
-* Select pizza type
-* Add extra cheese
-* Add extra toppings
-* Takeaway option
-* Automatic bill calculation
+* **Classes & Objects** – Used to structure the pizza and billing logic.
+* **Inheritance** – Used to create specialized pizza types.
+* **Encapsulation** – Used to protect data and pricing information.
+* **Polymorphism** – Used to provide different behavior for different pizza types.
 
-## 🚀 How to Run
+## 🛠️ How to Run
 
-Clone the repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/kartik-GTHUB/Pizza-Bill-Generator.git
 ```
 
-Open the project in **Eclipse** or any Java IDE and run the main Java class.
+2. Open the project in **Eclipse** or any Java IDE.
+3. Navigate to the `src/pizzaBillGenerator` package.
+4. Run the main Java class.
 
 ## 👨‍💻 Author
 
 **Kartik**
+
 GitHub: https://github.com/kartik-GTHUB
+

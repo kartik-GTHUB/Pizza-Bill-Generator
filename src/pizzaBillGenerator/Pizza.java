@@ -3,35 +3,91 @@ package pizzaBillGenerator;
 
 public class Pizza {
 	
-	private String price;
-	private Boolean veg;
-	private int extraCheesePrice = 100;
-	private int extraToppingPrice = 150;
-	private int backPackPrice = 20;
-	public Pizza (Boolean veg) {
-		this.veg = veg;
-		if(this.veg) {
-			this.price = "300";
-		}
-		else {
-			this.price ="400";
-		}
-	}
-	
-	public void addExtracheese() {
-	System.out.println("Extra cheese added");
-	this.price += extraCheesePrice;
-}
-	public void addExtratopping() {
-		System.out.println("Extra topping added");
-		this.price += extraToppingPrice;
-	}
-	public void takeAway() {
-		System.out.println("TakeAway Opted");
-		this.price += backPackPrice;
-	}
-	public void getBill() {
-		System.out.println(this.price);
-	}
+	  private int price;
+	  protected Boolean veg;
+	  
+	  private int addExtraCheeseprice = 100;
+	  private int extraToppingsadded = 150;
+	  private int backPackprice = 20;
+	  
+	  private int basePizzaPrice;
+	  
+	  private Boolean isExtraCheeseAdded = false;
+	  private Boolean isExtraToppingsAdded = false;
+	  private Boolean isOptedForTakeAway= false;
+	  
+	  
+	  public Pizza(Boolean veg) {
+		  
+		  this.veg = veg;
+		  if(this.veg) {
+			  this.price = 300;
+			  System.out.println("Pizza:" +this.price);
+			  
+			  
+		  }
+		  
+		  else {
+			  
+			  this.price = 400;
+			  System.out.println("Pizza:" +this.price);
+		  }
+		  basePizzaPrice = this.price;
+		  
+		  
+		  
+		  
+		  
+	  }
+	  
+	  public void getPizzaPrice() {
+//		  System.out.println(this.price);
+	  }
+	  
+	  public void addExtracheese() {
+		  isExtraCheeseAdded = true;
+//		  System.out.println("Extra Cheese Added");
+		  this.price += addExtraCheeseprice;
+		  
+	  }
+	  
+	  public void addExtraToppings() {
+		  isExtraToppingsAdded = true;
+//		  System.out.println("Extra Toppings Added");
+		  this.price += extraToppingsadded;
+		  
+	  }
+	  
+	  public void takeAway() {
+		  isOptedForTakeAway = true;
+//		  System.out.println("Take Away opted");
+		  this.price += backPackprice;
+		  
+	  }
+	  
+	  public void getBill() {
+		  
+		  String bill = "";
+		  
+//		  System.out.println( "Total Amount is:" +this.price);
+		  if(isExtraCheeseAdded) {
+			  bill += "Extra cheese added "+addExtraCheeseprice+ "\n";
+			  
+		  }
+		  if(isExtraToppingsAdded){
+			  bill += "Extra Topping added:" +extraToppingsadded+"\n";
+			  
+		  }
+		  if(isOptedForTakeAway) {
+			  bill += "Take Away: "+backPackprice+ "\n";
+			  
+			  
+			  
+		  }
+		  bill += "Bill: "+this.price + "\n";
+		  System.out.println(bill);
+	  }
+		
+
 }
 
